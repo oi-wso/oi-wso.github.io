@@ -495,6 +495,7 @@ body .lock {
   line-height: 50px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  cursor: pointer;
 }
 .btn--white {
   background-color: #ffffff;
@@ -507,14 +508,21 @@ body .lock {
   background-repeat: no-repeat;
 }
 
-.private-body-buttons__link {
-  color: #fffffe;
+.link-menu {
+  color: #000000;
   font-family: Bebas;
   font-size: 15px;
-  line-height: 25px;
   text-decoration: underline;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.link-menu--white {
+  color: #fffffe;
+}
+
+.private-body-buttons__link {
   margin-left: 15px;
 }
 
@@ -536,6 +544,14 @@ body .lock {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .products__column {
@@ -617,15 +633,6 @@ body .lock {
 
 .products-item__btn {
   margin-bottom: 29px;
-}
-
-.products-item__link {
-  color: #000000;
-  font-family: Bebas;
-  font-size: 15px;
-  text-decoration: underline;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
 }
 
 .why-top {
