@@ -43,6 +43,11 @@ $('.header-menu__icon').click(function(event) {
 	$('.header-menu').toggleClass('active');
 	if($(this).hasClass('active')){
 		$('body').data('scroll',$(window).scrollTop());
+		$('.header-bottom-menu__link').click(function() { 
+      $('.header-menu').removeClass('active');
+      $('.header-menu__icon').removeClass('active');
+      $('body').removeClass('lock');
+    });
 	}
 		$('body').toggleClass('lock');
 	if(!$(this).hasClass('active')){
