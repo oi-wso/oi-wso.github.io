@@ -64,7 +64,7 @@ $(window).scroll(function(event) {
    });
 
   //E-mail Ajax Send
-  $("form").submit(function() { //Change
+  $(".popup-form").submit(function() { //Change
     var th = $(this);
     $.ajax({
       type: "POST",
