@@ -142,21 +142,26 @@
 					</div>
 					<div class="contacts__body">
 						<div class="contacts__column">
-							<form class="contacts__form form-contacts" action="#" >
+								<form class="contacts__form form-contacts" action="mail.php" method="POST" >
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="oi-wso.github.io">
+								<input type="hidden" name="admin_email" value="abv916511@yandex.ru">
+								<input type="hidden" name="form_subject" value="Сообщение с сайта">
+								<!-- END Hidden Required Fields -->
 								<div class="form-contacts__body">
 									<div class="form-contacts__row">
 										<div class="form-contacts__column">
 											<label for="name" class="form-contacts__label">Ваше имя</label>
-											<input type="text" name="name" class="input" id="name" required>
+											<input type="text" name="Имя" class="input" id="name" required>
 										</div>
 										<div class="form-contacts__column">
 											<label for="email" class="form-contacts__label">Ваш e-mail</label>
-											<input type="email" name="email" class="input" id="email" required>
+											<input type="email" name="Email" class="input" id="email" required>
 										</div>
 									</div>
 									<div class="form-contacts__textarea">
 										<label for="message" class="form-contacts__label">Ваше сообщение</label>
-										<textarea class="input" id="message" required></textarea>
+										<textarea class="input" id="message" name="Сообщение" required></textarea>
 										<button type="submit" class="form-contacts__btn btn btn--black"><span>Отправить запрос</span></button>	
 									</div>
 								</div>
@@ -197,13 +202,18 @@
 			<button class="popup__close-btn button">&times;</button>
 			<h4 class="popup__title">Хотите узнать больше?</h4>
 			<p class="popup__text">Оставьте свои контактные данные для связи</p>
-			<form action="#" class="popup-form">
+			<form action="mail.php" method="POST" class="popup-form">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="oi-wso.github.io">
+				<input type="hidden" name="admin_email" value="abv916511@yandex.ru">
+				<input type="hidden" name="form_subject" value="Заявка на звонок с сайта">
+				<!-- END Hidden Required Fields -->
 				<label class="form-contacts__label" for="#name">Ваше имя*</label>
-				<input class="popup-form__input input" type="text" name="name" id="name" required>
+				<input class="popup-form__input input" type="text" name="Имя" id="name" required>
 				<label class="form-contacts__label" for="#tel">Номер телефона*</label>
-				<input class="popup-form__input input" type="tel" name="tel" id="tel" required>
-				<label class="form-contacts__label" for="#message">Номер телефона*</label>
-				<textarea class="popup-form__input input" rows="5" id="message"></textarea>
+				<input class="popup-form__input input" type="tel" name="Телефон" id="tel" required>
+				<label class="form-contacts__label" for="#message">Ваше сообщение*</label>
+				<textarea class="popup-form__input input" rows="5" id="message" name="Сообщение"></textarea>
 				<button class="popup-form__btn btn btn--black"><span>Заказать звонок</span></button>
 			</form>
 		</div>
