@@ -64,11 +64,11 @@ $(window).scroll(function(event) {
    });
 
   //E-mail Ajax Send
-  $(".popup-form").submit(function() { //Change
+  $("form").submit(function() {
     var th = $(this);
     $.ajax({
       type: "POST",
-      url: "mail.php", //Change
+      url: "mail.php", 
       data: th.serialize()
     }).done(function() {
       alert("Спасибо за заявку!");
