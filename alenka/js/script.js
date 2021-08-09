@@ -5,7 +5,7 @@ var header = document.getElementById("header-nav");
 var sticky = header.offsetTop;
 
 function myFunction() {
-	if (window.pageYOffset >= 1) {
+	if (window.pageYOffset >= sticky) {
 		header.classList.add("sticky");
 	} else {
 		header.classList.remove("sticky");
