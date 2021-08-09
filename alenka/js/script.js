@@ -48,7 +48,7 @@ bars.addEventListener('click', () => {
 	bars.classList.toggle('rotate');
 	if ($(headerMenu).hasClass('active')) {
 		// window.scrollTo(0, 0);
-		$('html, body').animate({ scrollTop: 1 }, 200);
+		$('html, body').animate({ scrollTop: 0 }, 200);
 		console.log('check');
 	}
 	$('body').toggleClass('lock');
