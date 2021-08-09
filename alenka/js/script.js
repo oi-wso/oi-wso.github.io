@@ -46,11 +46,10 @@ adaptive_function();
 bars.addEventListener('click', () => {
 	headerMenu.classList.toggle('active');
 	bars.classList.toggle('rotate');
-	if ($(headerMenu).hasClass('active')) {
-		// window.scrollTo(0, 0);
-		$('html, body').animate({ scrollTop: 0 }, 200);
-		console.log('check');
-	}
+	// if ($(headerMenu).hasClass('active')) {
+	// 	$('html, body').animate({ scrollTop: 0 }, 200);
+	// 	console.log('check');
+	// }
 	$('body').toggleClass('lock');
 
 });
