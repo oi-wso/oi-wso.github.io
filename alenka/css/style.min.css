@@ -548,6 +548,10 @@ h6 {
   background: transparent;
 }
 
+.slider .slick-dots li button {
+  display: none;
+}
+
 .slider .slick-dots li::before {
   background: #f7f7f7;
   width: 70px;
@@ -1560,7 +1564,6 @@ h6 {
 @media (max-width: 767.98px) {
   body.lock {
     width: 100%;
-    position: fixed;
     overflow: hidden;
   }
 }
