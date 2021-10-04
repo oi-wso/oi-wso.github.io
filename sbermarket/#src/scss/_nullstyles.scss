@@ -1,0 +1,189 @@
+//<Шрифт по умолчанию>==========================================================================================
+$fontfamily: "SB Sans Display", sans-serif;
+$colord: #000000;
+$colorw: #fbfbfb;
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	min-width: $minwidth;
+	position: relative;
+	width: 100%;
+	color: #000;
+}
+body {
+	font-size: 100%;
+	line-height: 140%;
+	font-size: 16px;
+	background: #ffffff;
+	font-family: $fontfamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: $fontfamily;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+}
+input::-ms-clear {
+	display: none;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+button:hover,
+button:active,
+button:focus {
+	outline: transparent;
+}
+
+a {
+	cursor: pointer;
+	color: #000;
+}
+a,
+a:visited,
+a:focus,
+a:active,
+a:hover {
+	text-decoration: none;
+	outline: none;
+}
+
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "SB Sans Display";
+	font-weight: inherit;
+	font-size: inherit;
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container-box {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 15px;
+
+	@include nlg {
+		max-width: 970px;
+	}
+	@include nmd {
+		max-width: 750px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@include nsm {
+		width: 100%;
+		max-width: none;
+		padding: 0 24px;
+	}
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	line-height: 1;
+	cursor: pointer;
+	overflow: hidden;
+	transition: all 0.3s;
+	font-family: "SB Sans Text";
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+	color: #9b9b9b;
+	background: #ffffff;
+	border: 1px solid #eeeeee;
+	box-sizing: border-box;
+	border-radius: 24px;
+	transition: all 0.3s;
+	width: 92px;
+	height: 36px;
+	&:hover {
+		transition: all 0.3s;
+		color: #fff;
+		background: #9b38dc;
+		border-color: #9b38dc;
+	}
+}

@@ -1,0 +1,318 @@
+.header {
+	background-color: #ffffff;
+	// position: fixed;
+	// top: 0;
+	// width: 100%;
+	// z-index: 1999;
+	&__top {
+		background: #dce5e9;
+		@include nsm {
+			background-color: #ffffff;
+			order: 3;
+			margin: 0 0 30%;
+		}
+	}
+	&__top-wrapper {
+		height: 40px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+		@include nsm {
+			display: block;
+			height: auto;
+		}
+	}
+	&__top-text {
+		font-size: 14px;
+		transition: all 0.3s;
+		color: #000000;
+		&:hover {
+			text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+			transition: all 0.3s;
+		}
+		&:first-child {
+			@include nsm {
+				margin-bottom: 10px;
+			}
+		}
+		@include nsm {
+			display: block;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+	}
+	&__bottom {
+		.container {
+			@include nsm {
+				padding: 0;
+			}
+		}
+	}
+	&__wrapper {
+		min-height: 100px;
+		background: #ffffff;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #000000;
+		border-bottom: 1px solid #cecece;
+		a {
+			color: #000000;
+		}
+		@include nlg {
+			flex-wrap: wrap;
+		}
+		@include nsm {
+			flex-wrap: nowrap;
+			min-height: 68px;
+			padding: 0 15px;
+		}
+	}
+	&__nav-item {
+		padding: 7px 5px;
+		position: relative;
+		transition: all 0.3s;
+		font-size: 16px;
+		line-height: 100%;
+	}
+}
+
+@include nmd {
+	.logo,
+	#navbar {
+		margin: 0;
+		//width: 100%;
+		text-align: center;
+	}
+}
+@include nsm {
+	#navbar {
+		position: relative;
+		top: 0;
+		left: 0;
+		text-align: left;
+		transition: 0.5s linear;
+		z-index: 1001;
+		margin-bottom: 95px;
+		width: 100%;
+		height: auto;
+		li {
+			display: block;
+		}
+	}
+	#navbar-mob {
+		position: absolute;
+		top: 68px;
+		left: -140%;
+		transition: 0.5s linear;
+		width: 100%;
+		z-index: 1001;
+		background-color: #ffffff;
+		//min-height: 87%;
+		//max-height: 100%;
+		overflow-y: scroll;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		&.active {
+			left: 0px;
+			transition: 0.5s linear;
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	.menu-two {
+		position: relative;
+	}
+	.bars {
+		display: block;
+	}
+}
+
+.bars {
+	color: white;
+	width: 27px;
+	height: 22px;
+	cursor: pointer;
+	display: none;
+	order: 4;
+	background: url("../img/burger.svg") top center no-repeat;
+}
+.bars.rotate {
+	background: url("../img/close.svg") top center/auto 100% no-repeat;
+}
+.logo {
+	line-height: 100px;
+	order: 1;
+	a {
+		color: #000000;
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	@include nmd {
+		flex: 0 0 auto;
+		line-height: 60px;
+	}
+}
+
+.user-p {
+	order: 3;
+	@include nmd {
+		flex: 0 0 auto;
+		order: 2;
+	}
+	@include nsm {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	&__link {
+		font-weight: 600;
+		display: inline-block;
+		padding: 7px 0;
+		font-size: 12px;
+		position: relative;
+		line-height: 100%;
+		&:first-child {
+			margin-right: 25px;
+			@include nsm {
+				margin-right: 0;
+				order: 2;
+				margin-top: 10px;
+			}
+		}
+		@include nsm {
+			text-align: center;
+			font-size: 14px;
+			padding: 0;
+		}
+	}
+}
+#navbar-mob {
+	order: 2;
+	@include nmd {
+		order: 3;
+		flex: 1 1 100%;
+	}
+	@include nsm {
+	}
+}
+#navbar {
+	background: #ffffff;
+	@include nmd {
+		text-align: center;
+		margin-right: 0;
+	}
+	@include nsm {
+	}
+}
+#navbar > li {
+	list-style: none;
+	display: inline-block;
+	line-height: 100px;
+	margin: 0 20px;
+
+	&:hover {
+		text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+		.anim-link::before {
+			width: 100%;
+			transition: all 0.3s;
+		}
+	}
+	@include nlg {
+		margin: 0 10px;
+	}
+	@include nmd {
+		line-height: 60px;
+	}
+	@include nsm {
+		line-height: 50px;
+		text-align: center;
+	}
+}
+
+.drop-down {
+	position: relative;
+	&:hover > .menu-two {
+		display: flex;
+		transition: all 0.5s;
+		@include nsm {
+			display: block;
+		}
+	}
+}
+.menu-two {
+	position: absolute;
+	background: #ffffff;
+	left: 0;
+	display: none;
+	top: 101%;
+	padding: 1em 1000em;
+	margin: 0 -1000em;
+	z-index: 3;
+	flex-direction: column;
+	//column-count: 7;
+	max-height: 120px;
+	flex-wrap: wrap;
+	//column-gap: normal;
+	@include nsm {
+		max-height: none;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	li {
+		list-style: none;
+		min-width: 80px;
+		width: max-content;
+		text-align: left;
+		//column-span: all;
+		font-size: 14px;
+		font-weight: normal;
+		letter-spacing: 0px;
+		transition: text-shadow 0.3s;
+		padding: 7px 5px;
+		line-height: 2;
+		&:hover {
+			font-weight: 600;
+			transition: font-weight 0.3s;
+		}
+		// &:nth-last-child(n + 3),
+		// &:nth-last-child(n + 3) ~ * {
+		// 	column-span: none;
+		// }
+		@include nsm {
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+#navbar > .drop-down:last-child > .menu-two {
+	@include nmd {
+		max-height: none;
+	}
+}
+
+.drop-down {
+	&:hover {
+		span {
+			transform: rotate(-90deg);
+		}
+	}
+}
